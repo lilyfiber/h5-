@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,user-scalable=no"><title></title><script src=./static/js/jweixin-1.2.0.js></script><script src=./static/js/jquery-2.1.4.min.js></script><script src="./static/js/canvas2image.js?v=1.0.0"></script><script src="./static/js/html2canvas.js?v=1.0.0"></script><script src="./static/js/vconsole.min.js?v=1.0.0"></script><script type=text/javascript>window.onload=function () { 
+		    document.addEventListener('touchstart',function (event) { 
+		      if(event.touches.length>1){ 
+		        event.preventDefault(); 
+		      } 
+		    }) 
+		    var lastTouchEnd=0; 
+		    document.addEventListener('touchend',function (event) { 
+		      var now=(new Date()).getTime(); 
+		      if(now-lastTouchEnd<=300){ 
+		        event.preventDefault(); 
+		      } 
+		      lastTouchEnd=now; 
+		    },false) 
+		  }</script><link href=/static/css/app.81aa28c4c64fe55ce269def5ee8ec625.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.6c0a236c075a05f8a37e.js></script><script type=text/javascript src=/static/js/vendor.8f732774212ef41f4a1a.js></script><script type=text/javascript src=/static/js/app.8def6f8382be399d7415.js></script></body></html>

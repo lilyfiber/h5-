@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,user-scalable=no">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+     <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>某天，我抽到了一张符…</title>
+    <script src="./static/js/jweixin-1.2.0.js"></script>
+    <script src="./static/js/jquery-2.1.4.min.js"></script>
+    <script src="./static/js/canvas2image.js?v=1.0.0"></script>
+    <script src="./static/js/html2canvas.js?v=1.0.0"></script>
+    <script src="./static/js/vconsole.min.js?v=1.0.0"></script>
+    <script type="text/javascript" src="https://js.users.51.la/19692273.js"></script>
+    <script type="text/javascript">
+    	window.onload=function () { 
+		    document.addEventListener('touchstart',function (event) { 
+		      if(event.touches.length>1){ 
+		        event.preventDefault(); 
+		      } 
+		    }) 
+		    var lastTouchEnd=0; 
+		    document.addEventListener('touchend',function (event) { 
+		      var now=(new Date()).getTime(); 
+		      if(now-lastTouchEnd<=300){ 
+		        event.preventDefault(); 
+		      } 
+		      lastTouchEnd=now; 
+		    },false) 
+		  }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
